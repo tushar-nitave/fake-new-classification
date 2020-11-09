@@ -36,6 +36,20 @@ It is observed that we are dealing with highly imbalanced data so we have to use
 sampling the data to make it balanced.
 
 Make dataset balanced:
+
     - SMOTE
     - undersampling
     - SMOTE + ENN
+
+
+#### Varun's Take
+To handle imbalance data
+
+    - Removing data redundancy
+        - Using some similarity measures to remove redundant data (https://medium.com/@adriensieg/text-similarities-da019229c894)
+
+    - If still imbalanced then we can go for SMOTHE
+        -Unfortunately, this technique doesn’t work well with text data because the numerical vectors that are created from the text are very high dimensional   
+
+    - Data Augmentation :
+        - creating new minority data by transforming(rotate, translate, scale, add some noise) to the ones in the data set
