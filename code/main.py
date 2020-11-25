@@ -30,7 +30,9 @@ class EDA:
 if __name__ == "__main__":
 
     data = pd.read_csv("../../data/train.csv", sep=",")
-    obj = EDA(data)
-    # obj.basic_info()
+    # obj = EDA(data)
+    # # obj.basic_info()
     data = pre_process(data)
-    data.to_csv("../../data/processed_data.csv", index=False)
+    data.to_csv("../../data/processed_train.csv", index=False)
+
+

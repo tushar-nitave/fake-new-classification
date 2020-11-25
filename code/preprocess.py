@@ -23,8 +23,8 @@ def pre_process(data):
     :return: title1 (sentences) and labels (sentiment)
     """
     print(colored("1. Preprocessing Data", "yellow"))
-    # data = data[:2]
-    REPLACE_NO_SPACE = re.compile("[_.;:!\'?,\"\(\)\[\]]")
+   
+    REPLACE_NO_SPACE = re.compile("[_.;:!\'?,\"\(\)\[\]<>$0-9]")
     REPLACE_WITH_SPACE = re.compile("(<br\s*/><br\s*/>)|(\-)|(\/)")
 
     # make lower case and remove puncutations
