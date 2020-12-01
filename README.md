@@ -1,55 +1,13 @@
 ## fake-new-classification
 
-#### Done
-1. Exploratory Data Analysis
-    - dataset size
-    - check if imbalanced
-    - missing data
-    - frequency of each class 
-2. Preprocessing
-    - remove stopwords
-    - stemming
-    - lowercase and remove punctuation
----
-#### To Do
-3. Feature Engineering
-    - using word2vec
-4. Model Architecture
-    - CNN
-    - full connected 
-5. Train and Validate
-    - hyperparameter tuning
-6. Test
-7. Evaluation Metrics
-    - Confusion matrix
-    - F1 score
-    - Precision
-    - Recall
-    - ROC
-8. Deploy
-    - Flask server
-9. Front-end (optional)
----
-#### Findings
+Overall idea of the project it to classify the given the title of a fake news article A and the title of a coming news article B, into three categories: 
+	Agreed: B talks about the same fake news as A. 
+Disagreed: B refutes the fake news in A. 
+Unrelated: B is unrelated to A.
 
-It is observed that we are dealing with highly imbalanced data so we have to use different strategies for 
-sampling the data to make it balanced.
-
-Make dataset balanced:
-
-    - SMOTE
-    - undersampling
-    - SMOTE + ENN
+We try to understand the semantic meaning of the given text article and then try to classify in one of these 3 categories. We have discussed how we plan to go about this in the method section.
 
 
-#### Varun's Take
-To handle imbalance data
-
-    - Removing data redundancy
-        - Using some similarity measures to remove redundant data (https://medium.com/@adriensieg/text-similarities-da019229c894)
-
-    - If still imbalanced then we can go for SMOTHE
-        -Unfortunately, this technique doesn’t work well with text data because the numerical vectors that are created from the text are very high dimensional   
-
-    - Data Augmentation :
-        - creating new minority data by transforming(rotate, translate, scale, add some noise) to the ones in the data set
+## Contributors
+- Tushar Nitave
+- Varun Shanbhag
