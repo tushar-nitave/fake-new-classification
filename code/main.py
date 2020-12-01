@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from preprocess import pre_process
 
+
 class EDA:
     def __init__(self, data):
         self.data = data
@@ -20,7 +21,7 @@ class EDA:
         print("\nMissing Values: {}".format(self.data.isnull().sum()))
 
         # histogram plot
-        self.data.label.value_counts().nlargest(40).plot(kind="bar", figsize=(10,5))
+        self.data.label.value_counts().nlargest(40).plot(kind="bar", figsize=(10, 5))
         plt.title("Distribution of Labels")
         plt.ylabel("Frequency (Label Count)")
         plt.xlabel("Labels")
@@ -29,10 +30,8 @@ class EDA:
 
 if __name__ == "__main__":
 
-    data = pd.read_csv("../../data/train.csv", sep=",")
-    # obj = EDA(data)
-    # # obj.basic_info()
-    data = pre_process(data)
-    data.to_csv("../../data/processed_train.csv", index=False)
-
-
+    data = pd.read_csv("../train.csv", sep=",")
+    obj = EDA(data)
+    obj.basic_info()
+    # data = pre_process(data)
+    # data.to_csv("processed_train.csv", index=False)
