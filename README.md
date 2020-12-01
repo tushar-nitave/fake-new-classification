@@ -1,4 +1,4 @@
-## fake-new-classification
+## Fake News Classification
 
 Overall idea of the project it to classify the given the title of a fake news article A and the title of a coming news article B, into three categories: 
 	Agreed: B talks about the same fake news as A. 
